@@ -1,3 +1,19 @@
+# ESP32c3 STD demo app
+
+```
+cargo install -f ldproxy espflash espmonitor cargo-espflash
+rustup install nightly
+rustup component add rust-src --toolchain nightly
+rustup target add riscv32imc-unknown-none-elf
+
+# Checkout this repo and from this directory run:
+rustup override set nightly
+
+env RUST_ESP32_STD_DEMO_WIFI_SSID="*****" RUST_ESP32_STD_DEMO_WIFI_PASS="*******" cargo build
+
+
+```
+
 # Rust on ESP32 STD demo app
 
 A demo STD binary crate for the ESP32[XX] and ESP-IDF, which connects to WiFi, Ethernet, drives a small HTTP server and draws on a LED screen.
